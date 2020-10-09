@@ -1,5 +1,7 @@
-from manimlib.imports import *
+import sys
+print(sys.path)
 
+from manimlib.imports import *
 
 class Intro(Scene):
     def construct(self):
@@ -136,13 +138,11 @@ class Bread(Scene):
         self.wait()
 
         br1 = Brace(ced[0], DOWN)
-        br1.next_to(ced[0], DOWN)
 
         exc.next_to(br1, DOWN)
 
-        br2 = Brace(ced[3], DOWN, background_stroke_wi)
-        br2.next_to(ced[3], DOWN)
-
+        br2 = Brace(ced[3], DOWN)
+        
         lim.next_to(br2, DOWN)
 
         self.play(ShowCreation(br2), ShowCreation(lim))
