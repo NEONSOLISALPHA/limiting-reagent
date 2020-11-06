@@ -111,8 +111,7 @@ class Bread(Scene):
         cross.set_stroke(RED, 6)
 
         dec.next_to(ce, LEFT)
-
-        self.play(FadeInFrom(ce,direction=DOWN), FadeInFrom(dec, direction=DOWN))
+        self.play(FadeInFrom(ce, direction=DOWN), FadeInFrom(dec, direction=DOWN))  # noqa: E501
 
         dec.add_updater(lambda d: d.set_value(val.get_value()))
         dec.add_updater(lambda d: d.next_to(ce, LEFT))
