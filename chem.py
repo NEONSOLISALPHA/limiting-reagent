@@ -40,6 +40,7 @@ class Intro(Scene):
         self.play(Uncreate(q), Uncreate(q_answer, run_time=1),
                   Uncreate(q2_answer, run_time=1))
 
+
 class Bread(Scene):
     def construct(self):
         eg = MathTex("\\rm Eg..")
@@ -62,7 +63,7 @@ class Bread(Scene):
         equa[5].set_color(color="#b0781e")
         equa.scale(1.1)
 
-        self.play(FadeInFrom(equadirection=DOWN))
+        self.play(FadeInFrom(equa, direction=DOWN))
         equa.generate_target()
         equa.target.next_to(eg, RIGHT)
         # equa.target.shift(LEFT*0.2)
